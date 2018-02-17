@@ -6,33 +6,19 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body class="container" ng-controller="StoreController as store">   <!-- brings store controller , only inside the body is affected -->
-    <div class="product row" ng-repeat= "product in store.products">
+    <!-- Products Container -->
+    <div class="list-group">
+      <!-- Product Container -->
+    <div class="list-group-item" ng-repeat= "product in store.products">
       <h3>  
         {{product.name}}  <!-- list products , the gems -->     
-        <em class="pull-right">${{product.price}}</em>
+        <em class="pull-right">{{product.price | currency}}</em>
       </h3>
+      <!-- Image Gallery -->
+      <div class="gallery">
+          <img ng-src="{{product.images[0]}}"/>
+        </div>
+      </div>
     </div>
   </body>
 </html>
-
-
-<!--<body>-->
-<!--    <div ng-controller="StoreController as store"></div></div>-->
-<!--    <h1> {{store.product.name}} </h1>-->
-    <!-- angular code ^for product name listed in app.js file-->
-<!--    <h2> ${{store.product.price}}</h2>-->
-    <!-- angular code ^shows price of ^ products listed in app.js-->
-<!--    <p> {{store.product.description}} </p>-->
-<!--    </div>-->
-    <!-- Angular code ^description information on each product listing from app.js -->
-<!--    <div class="product row" ng-show="!store.product.soldout">-->
-    
-<!--      <h3>{{store.product.name}}-->
-<!--        <em class="pull-right">${{store.product.price}}</em>-->
-<!--      </h3>-->
-<!--    <button ng-show="store.product.canPurchase">Add to Cart</button> -->
-    
-<!--    </div>-->
-<!--    <script type="text/javascript" src="angular.min.js"></script>-->
-<!--    <script type="text/javascript" src="app.js"</script></script>-->
-<!--</body>-->
