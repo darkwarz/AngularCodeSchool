@@ -1,0 +1,31 @@
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="product in store.products">
+        <h3 ng-include="'product-title.html'" --> name of file to include
+        </h3>
+        <section ng-controller="PaneController as panel">
+        
+        "ng-include is expecting a variable with the name of the file to include. 
+        to pass the name directly as a string. use single quotes ('...')
+        ... --> app.js -->
+        
+        {{product.name}} <em class="pull-right">${{product.price}}</em>
+        
+        <h3 ng-include="'product-title.html'"></h3>   index.html
+        <product-title></product-title>    index.html
+        
+        Directives: allow you to write HTML that expresses the behavior of your application
+        
+       <----------Note to self* = use app.js , index.html , and product-description.html
+       <----------product-reviews.html
+       <----------product-specs.html
+       
+        
+        <!-- description tab's content -->
+        <div>
+            <product-description ng-show="tab.isSet(1)"> </product-description>
+        </div>
+            
+            ng-show = angular show = tab.isSet(1) where to show the product is tab 1
+            
+            
+            
