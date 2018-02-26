@@ -1,6 +1,7 @@
-<div ng-repeat="car in store.rentals[0]"class="card small hoverable col s6 m4">
-    <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" ng-src="{{car.img}}">
+<div ng-repeat="car in store.rentals[0]"class="card small hoverable col s6 m4"> <!-- this is the card that holds car informationper tab -->
+    <div class="card-image waves-effect waves-block waves-light"> <!-- styles the card image to have a wave effect using boot strap -->
+        <img class="activator" ng-src="{{car.img}}">  <!-- shows the car image for each car -->
+        
     </div>
     <div class="divider"></div>
     <div class="card-content">
@@ -9,6 +10,7 @@
         <p class="flow-text">{{car.price | currency}}</p>
 
     </div>
+    <!-- show card when available -->
     <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{car.name}}<i class="material-icons right">close</i></span>
 
